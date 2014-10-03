@@ -8,6 +8,8 @@ Para executar o App:
 - Instale o NodeJS (http://nodejs.org)
 - Faça o clone do repositório no seu computador
 - A partir do diretório do repositório, acesse a linha de commando (CMD)
-- Execute 'npm install bower-install'
+- Execute 'npm install -g bower'
+- Execute 'npm install'
+- Execute 'bower install'
 - Execute 'node server.js'
 - A aplicação estará disponível en: http://localhost:3000/
