@@ -5,11 +5,13 @@ var Author = function (id, name) {
 	self.name = name;
 };
 
-var Post = function (author, text) {
+var Post = function (id, text, author) {
 	var self = this;
-
-	self.author = author;
+	
+	self.id = id;
 	self.text = text;
+	self.author = author;
+	self.createdAt = new Date();
 };
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
