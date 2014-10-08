@@ -1,29 +1,33 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">Novo post</h3>
-	</div>
+<div class="row">
+	<div class="col-xs-12 col-md-5">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Novo post</h3>
+			</div>
 
-	<div class="panel-body">
-		<div class="col-xs-12">
-			<form class="form" role="form">
-				<div class="form-group">
-					<label class="control-label">Autor</label>
-					<select class="form-control" ng-model="postAuthor" ng-options="author.name for author in authors">
-						<option value="">Selecione um autor...</option>>
-					</select>
+			<div class="panel-body">
+				<div class="col-xs-12">
+					<form class="form" role="form">
+						<div class="form-group">
+							<label class="control-label">Autor</label>
+							<select class="form-control" ng-model="postAuthor" ng-options="author.name for author in authors">
+								<option value="">Selecione um autor...</option>>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Texto</label>
+							<textarea class="form-control" ng-model="postText"></textarea>
+						</div>
+
+						<button class="btn btn-primary" ng-click="publish()" ng-disabled="!postAuthor || postText.length == 0">Publicar</button>
+					</form>
 				</div>
-
-				<div class="form-group">
-					<label class="control-label">Texto</label>
-					<textarea class="form-control" ng-model="postText"></textarea>
-				</div>
-
-				<button class="btn btn-primary" ng-click="publish()" ng-disabled="!postAuthor || postText.length == 0">Publicar</button>
-			</form>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="list-group" >
-	<chirper-post data="post" ng-repeat="post in posts | orderBy:'id':true"></chirper-post>
+	<div class="list-group col-xs-12 col-md-7">
+		<chirper-post data="post" ng-repeat="post in posts | orderBy:'id':true"></chirper-post>
+	</div>
 </div>
