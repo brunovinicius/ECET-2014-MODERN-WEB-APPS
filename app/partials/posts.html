@@ -1,6 +1,6 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title">Novo post...</h3>
+		<h3 class="panel-title">Novo post</h3>
 	</div>
 
 	<div class="panel-body">
@@ -18,12 +18,12 @@
 					<textarea class="form-control" ng-model="postText"></textarea> 
 				</div>
 
-				<button class="btn btn-primary" ng-click="publish()">Publicar</button>
+				<button class="btn btn-primary" ng-click="publish()" ng-disabled="!postAuthor || postText.length == 0">Publicar</button>
 			</form>
 		</div>
 	</div>
 </div>
 
 <div class="list-group" >
-	<palestra-post data="post" ng-repeat="post in posts | orderBy: 'createdAt':true"></palestra-post>
+	<palestra-post data="post" ng-repeat="post in posts | orderBy:'id':true"></palestra-post>
 </div>

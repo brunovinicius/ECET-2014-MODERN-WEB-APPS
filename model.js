@@ -1,17 +1,12 @@
 var Author = function (id, name) {
-	var self = this;
-
-	self.id = id;
-	self.name = name;
+	this.id = id;
+	this.name = name;
 };
 
 var Post = function (id, text, author) {
-	var self = this;
-	
-	self.id = id;
-	self.text = text;
-	self.author = author;
-	self.createdAt = new Date();
+	this.id = id;
+	this.text = text;
+	this.author = author;
 };
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
