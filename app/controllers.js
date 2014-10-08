@@ -1,4 +1,4 @@
-angular.module('palestra.controllers', [])
+angular.module('chirper.controllers', [])
 	.controller('PostsController', ['$scope', 'PostService', 'AuthorService', function($scope, postService, authorService) {
 		$scope.posts = [];
 		$scope.postText = '';
@@ -26,7 +26,7 @@ angular.module('palestra.controllers', [])
 			});
 
 
-		authorService.getAuthors() 
+		authorService.getAuthors()
 			.then (function (authors) {
 				$scope.authors = authors;
 			})
@@ -35,4 +35,3 @@ angular.module('palestra.controllers', [])
 			});
 
 	}]);
-

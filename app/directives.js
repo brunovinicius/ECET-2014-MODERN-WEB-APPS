@@ -1,5 +1,5 @@
-angular.module('palestra.directives', [])
-	.directive('palestraPost', function() {
+angular.module('chirper.directives', [])
+	.directive('chirperPost', function() {
 		return {
 			restrict: 'E',
 			replace: true,

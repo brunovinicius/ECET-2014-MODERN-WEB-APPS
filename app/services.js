@@ -1,4 +1,4 @@
-angular.module('palestra.services', [])
+angular.module('chirper.services', [])
 	.factory('PostService', ['$http', '$q', function($http, $q) {
 		return {
 			getPosts: function() {
@@ -9,7 +9,7 @@ angular.module('palestra.services', [])
 					}, function(response) {
 						deferred.reject(response.data);
 					});
-					
+
 				return deferred.promise;
 			},
 			publish: function(post) {
@@ -20,7 +20,7 @@ angular.module('palestra.services', [])
 					}, function(response) {
 						deferred.reject(response.data);
 					});
-					
+
 				return deferred.promise;
 			},
 		};
@@ -35,7 +35,7 @@ angular.module('palestra.services', [])
 					}, function(response) {
 						deferred.reject(response.data);
 					});
-					
+
 				return deferred.promise;
 			}
 		};

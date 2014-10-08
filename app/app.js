@@ -1,4 +1,4 @@
-var app = angular.module('palestra', ['palestra.services', 'palestra.directives', 'palestra.controllers', 'ngRoute']);
+var app = angular.module('chirper', ['chirper.services', 'chirper.directives', 'chirper.controllers', 'ngRoute']);
 
 app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 	$routeProvider.when('/posts', {
