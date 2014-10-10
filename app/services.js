@@ -81,10 +81,20 @@ angular.module('chirper.services', [])
 		};
 		return {
 			get: function() {
+				context.author = {
+					id: sessionStorage['authorId'],
+					name: sessionStorage['authorName'],
+				};
+
 				return context;
+			},
+			save: function(context) {
+				sessionStorage['authorId'] = context.author.id;
+				sessionStorage['authorName'] = context.author.name;
 			},
 			clear: function() {
 				context.author = null;
+				sessionStorage.clear();
 			}
 		};
 	}]);

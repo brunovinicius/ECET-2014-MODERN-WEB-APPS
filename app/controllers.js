@@ -11,6 +11,7 @@ angular.module('chirper.controllers', [])
 				.then(function(author) {
 					var context = appContext.get();
 					context.author = author;
+					appContext.save(context);
 					$location.path('/posts');
 				})
 				.catch(function(error) {
