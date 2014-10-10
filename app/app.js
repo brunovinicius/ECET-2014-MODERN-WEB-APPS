@@ -9,7 +9,7 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
 		templateUrl: 'app/partials/posts.html',
 		controller: 'PostsController'
 	}).otherwise({
-		redirectTo: '/login'
+		redirectTo: '/posts'
 	});
 }])
 .run(['$rootScope', '$location', 'AppContext', function($rootScope, $location, appContext) {
