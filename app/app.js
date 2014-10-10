@@ -13,10 +13,11 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
 	});
 }])
 .run(['$rootScope', '$location', 'AppContext', function($rootScope, $location, appContext) {
-	var context = appContext.get();
+
 	$rootScope.$on('$routeChangeStart', function(event, next, current) {
+		var context = appContext.get();
 		// Redirect user to login page if he's not authenticated
-		if (next.route !== '/login' && !context.author)
+		if (next.route !== '/login' && !context.author.id)
 			$location.path('/login');
 	});
 }]);
