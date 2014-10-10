@@ -62,6 +62,29 @@ angular.module('chirper.services', [])
 					});
 
 				return deferred.promise;
+			},
+			login: function(username) {
+				var deferred = $q.defer();
+				$http.post('/api/authors', { username: username })
+					.then(function(response) {
+						deferred.resolve(response.data);
+					}, function(response) {
+						deferred.reject(response.data);
+					});
+				return deferred.promise;
+			}
+		};
+	}])
+	.factory('AppContext', [function() {
+		var context = {
+			author: null
+		};
+		return {
+			get: function() {
+				return context;
+			},
+			clear: function() {
+				context.author = null;
 			}
 		};
 	}]);

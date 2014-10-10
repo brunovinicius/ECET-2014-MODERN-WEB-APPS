@@ -1,0 +1,18 @@
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Chirper</h1>
+        <p class="lead">
+            Uma aplicação de exemplo para o Encontro de Ciências Exatas e Tecnologia
+        </p>
+    </div>
+</div>
+<div class="container">
+    <div class="col-xs-4 col-xs-offset-4">
+        <form role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Digite seu nome" ng-model="username">
+            </div>
+            <button type="submit" class="btn btn-primary" ng-disabled="username.length === 0" ng-click="login()">Entrar</button>
+        </form>
+    </div>
+</div>

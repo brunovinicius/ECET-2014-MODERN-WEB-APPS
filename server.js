@@ -43,6 +43,13 @@ app.get('/api/authors', function(req, res) {
    	res.send(authors)
 });
 
+app.post('/api/authors', function(req, res) {
+	var username = req.body.username;
+	var author = new Author(id_sequence++, username);
+	authors.push(author);
+	res.send(author);
+});
+
 var server = app.listen(3000, function() {
     console.log('Listening on port %d...', server.address().port);
 });

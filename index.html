@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="chirper">
     <head viewport>
         <title>Chirper</title>
 
@@ -21,21 +21,21 @@
         <script src="model.js"></script>
     </head>
 
-    <body ng-app="chirper">
-
+    <body ng-controller="MasterController">
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <span class="navbar-brand">Chirper</span>
+                    <a href="#/login" class="navbar-brand">Chirper</a>
                 </div>
                 <div class="collapse navbar-collapse" role="navigation">
-                  <!-- Nothing to do here for now -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <p class="navbar-text">{{context.author.name}}</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div ng-view></div>
-        </div>
+        <div ng-view></div>
     </body>
 </html>
