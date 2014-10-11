@@ -12,4 +12,4 @@ Para executar o App:
 - Execute 'npm install'
 - Execute 'bower install'
 - Execute 'node server.js'
-- A aplicação estará disponível en: http://localhost:3000/
+- A aplicação estará disponível em: http://localhost:3000/
