@@ -22,7 +22,8 @@ angular.module('chirper.services', [])
 						});
 
 						deferred.resolve(posts);
-					}, function(response) {
+					})
+					.catch(function(response) {
 						deferred.reject(response.data);
 					});
 

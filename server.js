@@ -33,7 +33,7 @@ app.get('/api/posts', function(req, res) {
 
 app.post('/api/posts', function(req, res) {
 	var rawPost = req.body.post;
-	var post = new Post(id_sequence++, rawPost.text, rawPost.author);
+	var post = new Post(id_sequence++, rawPost.text, new Author(rawPost.author.id, rawPost.author.name));
 	posts.push(post);
 	res.send(post);
 });
