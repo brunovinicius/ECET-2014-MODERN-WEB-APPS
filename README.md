@@ -1,7 +1,7 @@
 ECET-2014-MODERN-WEB-APPS
 =========================
 
-Aplicação simples que demonstra algusn conceitos apresentados na palestra.
+Aplicação simples que demonstra alguns conceitos apresentados na palestra.
 
 Para executar o App:
 
