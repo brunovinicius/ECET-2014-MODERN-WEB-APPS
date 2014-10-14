@@ -21,7 +21,6 @@ var posts = [
 	new Post(id_sequence++, 'Cacilds! ¬¬"', authors[0]),
 ];
 
-
 var app = express();
 
 app.use(bodyParser.json());       // to support JSON-encoded bodies
@@ -29,18 +28,18 @@ app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bo
 app.use(express.static(__dirname));
 
 app.get('/api/posts', function(req, res) {
-  	res.send(posts)
+	res.send(posts);
 });
 
 app.post('/api/posts', function(req, res) {
 	var rawPost = req.body.post;
-	var post = new Post(id_sequence++, rawPost.text, rawPost.author)
+	var post = new Post(id_sequence++, rawPost.text, rawPost.author);
 	posts.push(post);
 	res.send(post);
 });
 
 app.get('/api/authors', function(req, res) {
-   	res.send(authors)
+	res.send(authors);
 });
 
 app.post('/api/authors', function(req, res) {

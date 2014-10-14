@@ -13,7 +13,6 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
 	});
 }])
 .run(['$rootScope', '$location', 'AppContext', function($rootScope, $location, appContext) {
-
 	$rootScope.$on('$routeChangeStart', function(event, next, current) {
 		var context = appContext.get();
 		// Redirect user to login page if he's not authenticated
